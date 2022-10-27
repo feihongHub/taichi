@@ -1,0 +1,290 @@
+*{
+    text-decoration: none !important;
+}
+.navbar-wrapper{
+    margin-top: 0px;
+}
+
+header {
+    z-index: 16;
+    background: rgba(0, 0, 0, 0.85);
+    width: 100%;
+    top: 0;
+    position: absolute;
+}
+header .top {
+    height: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.clearfix:before {
+    display: table;
+    content: " ";
+}
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.logo {
+    float: left;
+    height: 72px;
+    width: 222px;
+    max-width: 222px;
+    position: relative;
+}
+.cz-cen {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    display: -webkit-flex;
+}
+.logo a {
+    margin-top: 20px;
+}
+img {
+    -webkit-user-drag: none;
+    vertical-align: middle;
+    max-width: 100%;
+}
+.logo::after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    z-index: -1;
+    width: 100%;
+    left: 0;
+    height: 25px;
+    border-top: 25px solid rgba(0, 0, 0, 0.85);
+    width: 100%;
+    border-right: 32px solid transparent;
+    border-left: 32px solid transparent;
+}
+.nav-tab {
+    width: 900px;
+    z-index: 9;
+    float: right;
+}
+.align-right {
+    text-align: right;
+    line-height: 0;
+    font-size: 0;
+}
+ul, ol {
+    padding-left: 0;
+    margin: 0;
+}
+.nav-tab .sub-li:hover, .nav-tab .sub-li.current, .nav-tab .sub-menu li:hover {
+    background: #cba726;
+}
+.nav-tab .sub-li {
+    position: relative;
+    height: 72px;
+}
+.align-left li, .align-right li, .align-center li {
+    display: inline-block;
+}
+.time4 {
+    transition-duration: .5s;
+    -moz-transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+    -o-transition-duration: .5s;
+}
+li {
+    list-style: none;
+}
+.nav-tab .sub-li a {
+    display: block;
+    position: relative;
+    padding: 15px 28px;
+    text-align: center;
+}
+.nav-tab .sub-li a span {
+    color: #fff;
+    font-size: 15px;
+    line-height: 35px;
+    display: block;
+}
+
+
+#about {
+    padding: 5px 0 100px 0;
+    width: 100%;
+    background: url(../img/about_bg.png) no-repeat right bottom;
+}
+
+#about .about_left {
+    width: 28.5%;
+    float: left;
+    text-align: right;
+    position: relative;
+    margin-left: 7%;
+}
+.about_right h2 {
+    color: #444444;
+    font-size: 40px;
+    line-height: 50px;
+    position: relative;
+    padding-left: 45px;
+}
+.about_right {
+    width: 55%;
+    float: right;
+    padding-top: 5%;
+}
+#about .about_left::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #cba726;
+    left: -20%;
+    bottom: -10%;
+    z-index: -1;
+}
+.about_right h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 22px;
+    width: 35px;
+    height: 4px;
+    background: #cba726;
+    display: block;
+}
+.about_right a, .team a.nr_more, .honor a.nr_more {
+    color: #444444;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 15px;
+    padding: 0 30px;
+    display: inline-block;
+    border-radius: 5px;
+    border: 2px solid #cba726;
+}
+.featurette-heading{
+    padding-top: 30px;
+}
+/* 太极相册 */
+.album-container{
+    /* 弹性布局 默认水平排列 */
+    display: flex;
+    width: 60vw;
+    max-width: 760px;
+    height: 450px;
+    /* 溢出隐藏 */
+    overflow: hidden;
+    
+}
+.album-item{
+    /* 相对定位 */
+    position: relative;
+    width: 60px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 30px;
+    /* 保持原有尺寸比例，裁切长边 */
+    background-size: cover;
+    /* 定位背景图像为正中间 */
+    background-position: center;
+    /* 过渡效果：时长 贝塞尔曲线 */
+    transition: 0.5s cubic-bezier(0.05,0.61,0.41,0.95);
+    overflow: hidden;
+}
+.album-item .shadow{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    transition: 0.5s cubic-bezier(0.05,0.61,0.41,0.95);
+}
+.album-item .content{
+    display: flex;
+    position: absolute;
+    left: 10px;
+    right: 0;
+    bottom: 10px;
+    height: 40px;
+    transition: 0.5s cubic-bezier(0.05,0.61,0.41,0.95);
+}
+.album-item .content .icon{
+    min-width: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+.album-item:nth-child(1) .fa{
+    color: #fc6e51;
+}
+.album-item:nth-child(2) .fa{
+    color: #ffce54;
+}
+.album-item:nth-child(3) .fa{
+    color: #2ecc71;
+}
+.album-item:nth-child(4) .fa{
+    color: #5d9cec;
+}
+.album-item:nth-child(5) .fa{
+    color: #ac92ec;
+}
+.album-item .content .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    color: #fff;
+    width: 100%;
+}
+.album-item .content .text div{
+    /* 超出显示省略号（需要设置width） */
+    width: calc(100% - 70px);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+.album-item .content .text .tit{
+    font-weight: bold;
+    font-size: 18px;
+}
+.album-item .content .text .sub{
+    /* 设置过渡效果延迟时间 */
+    transition-delay: 0.1s;
+}
+/* 选中态样式 */
+.album-item.active{
+    flex: 1;
+    margin: 0;
+    border-radius: 40px;
+}
+.album-item.active .shadow{
+    background: linear-gradient(to top,rgba(0,0,0,0.35) 65%,transparent);
+}
+.album-item.active .content{
+    bottom: 20px;
+    left: 20px;
+}
+.album-item.active .content .text div{
+    opacity: 1;
+}
